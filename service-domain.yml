@@ -3,4 +3,6 @@ releases:
 
 addons:
 - name: add-search-domain
-  jobs: search_domain
+  jobs: 
+  - name: search_domain
+    release: search_domain 
