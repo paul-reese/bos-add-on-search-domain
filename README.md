@@ -24,4 +24,6 @@ $ bosh target 192.168.50.4
 Target set to 192.168.50.4
 ```
 
-## 
+## bosh manifest
+Let's build a bosh manifest, that we will use as runtime config and introduce as an add-on
+ 
