@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -ex
+
+echo "search <%=p('search_domain')%>" >> /etc/resolvconf/resolv.conf.d/tail
+
+/sbin/resolvconf -u

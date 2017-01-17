@@ -1,0 +1,6 @@
+releases:
+- {name: search-domain, version: 0.0.1}
+
+addons:
+- name: add-search-domain
+  jobs: search_domain
