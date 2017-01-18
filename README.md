@@ -1,7 +1,6 @@
 # bosh-add-on-search-domain
 
 ## install bosh-lite (*_optional_* if using an existing PCF installation)
-
 Bring bosh-lite VM up with Vagrant:
 ```
 $ vagrant init cloudfoundry/bosh-lite
@@ -12,7 +11,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ```
 
 ## install bosh cli
-BOSH CLI is a command line interface to the _Director_. It is distributed as a Ruby gem.
+BOSH CLI is a command line interface to the _Director_. It is distributed as a Ruby gem;
 ```
 $ gem install bosh_cli
 ```
@@ -25,6 +24,7 @@ $ bosh target <director_url>
 Note: <director_url> would be the URL or IP address of bosh director, if using bosh-lite with a Vagrant VM the URL is '192.168.50.4';
 
 ## clone repository
+Clone the GitHub repository;
 ```
 $ git clone https://github.com/phopper-pivotal/bosh-add-on-search-domain.git
 
@@ -32,7 +32,7 @@ $ cd bosh-add-on-search-domain
 ```
 
 ## create bosh release
-Let's create a bosh release using the project included with this repository. When prompted for "development release name" use _search_domain_
+Let's create a bosh release using the project included with this repository. When prompted for "development release name" use _search_domain_;
 
 ```
 $ create bosh release --force 
@@ -161,7 +161,7 @@ Releases total: 2
 ```
 
 ## update runtime-config for bosh add on
-We have a release uploaded, now let's update the runtime-config for the add on
+We have a release uploaded, now let's update the runtime-config for the add on;
 ```
 $ bosh update runtime-config service-domain.yml
 Acting as user 'admin' on 'Bosh Lite Director'
@@ -169,7 +169,7 @@ Successfully updated runtime config
 ```
 
 ## deploy add on to the VMs
-We have all the pieces together, let's deploy the bosh add on to our VM(s)
+We have all the pieces together, let's deploy the bosh add on to our VM(s);
 ```
 $ bosh deploy
 Acting as user 'admin' on deployment 'learn-bosh' on 'Bosh Lite Director'
