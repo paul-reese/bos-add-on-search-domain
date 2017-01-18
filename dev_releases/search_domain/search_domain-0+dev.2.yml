@@ -1,0 +1,11 @@
+---
+packages: []
+jobs:
+- name: search_domain
+  version: 9f5ea4c3c97bbd371b1c41933379c85c566a072a
+  fingerprint: 9f5ea4c3c97bbd371b1c41933379c85c566a072a
+  sha1: 7480d0c8383dd6ee64cdacf9e0c9d00aa805475d
+commit_hash: f7826eb7
+uncommitted_changes: true
+name: search_domain
+version: 0+dev.2
