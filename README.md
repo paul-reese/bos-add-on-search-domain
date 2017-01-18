@@ -97,7 +97,7 @@ Release manifest: /Users/phopper/Documents/pivotal/bosh/bosh-add-on-search-domai
 ## upload release to bosh director
 Now that we have a bosh release, we need to upload it to bosh director for use as a bosh add on;
 ```
-bosh upload release dev_releases/search_domain/search_domain-0+dev.1.yml                                                           1 ↵
+$ bosh upload release dev_releases/search_domain/search_domain-0+dev.1.yml                                                           1 ↵
 Acting as user 'admin' on 'Bosh Lite Director'
 [WARNING] Missing blobstore configuration, please update config/final.yml before making a final release
 
