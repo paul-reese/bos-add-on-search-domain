@@ -17,13 +17,80 @@ BOSH CLI is a command line interface to the _Director_. It is distributed as a R
 $ gem install bosh_cli
 ```
 
-Let CLI know about bosh-lite Director (use admin/admin to log in):
+Let CLI know about bosh Director (use admin/admin to log in):
 ```
-$ bosh target 192.168.50.4
+$ bosh target <director_url>
 
-Target set to 192.168.50.4
+```
+Note: <director_url> would be the URL or IP address of bosh director
+
+## clone repository
+```
+$ git clone https://github.com/phopper-pivotal/bosh-add-on-search-domain.git
+
+$ cd bosh-add-on-search-domain
 ```
 
-## bosh manifest
-Let's build a bosh manifest, that we will use as runtime config and introduce as an add-on
- 
+## create bosh release
+Let's create a bosh release using the project included with this repository. When prompted for "development release name" use _search_domain_
+
+```
+$ create bosh release --force 
+[WARNING] Missing blobstore configuration, please update config/final.yml before making a final release
+Syncing blobs...
+Please enter development release name: search_domain
+
+Building DEV release
+---------------------------------
+Release artifact cache: /Users/phopper/.bosh/cache
+
+Building license
+----------------
+Building license...
+  Warning: Missing LICENSE or NOTICE in /Users/phopper/Documents/pivotal/bosh/bosh-add-on-search-domain
+
+
+Building packages
+-----------------
+
+Building jobs
+-------------
+Building search_domain...
+  No artifact found for search_domain
+  Generating...
+  Generated version '6b3067919b3bea0314817abc0eb201bc70d35eb8'
+
+
+Building release
+----------------
+
+Generating manifest...
+----------------------
+Writing manifest...
+
+Release summary
+---------------
+Packages
++------+---------+-------+
+| Name | Version | Notes |
++------+---------+-------+
++------+---------+-------+
+
+Jobs
++---------------+------------------------------------------+-------------+
+| Name          | Version                                  | Notes       |
++---------------+------------------------------------------+-------------+
+| search_domain | 6b3067919b3bea0314817abc0eb201bc70d35eb8 | new version |
++---------------+------------------------------------------+-------------+
+
+Jobs affected by changes in this release
++---------------+------------------------------------------+
+| Name          | Version                                  |
++---------------+------------------------------------------+
+| search_domain | 6b3067919b3bea0314817abc0eb201bc70d35eb8 |
++---------------+------------------------------------------+
+
+Release name: search_domain
+Release version: 0+dev.1
+Release manifest: /Users/phopper/Documents/pivotal/bosh/bosh-add-on-search-domain/dev_releases/search_domain/search_domain-0+dev.1.yml
+```
