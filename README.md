@@ -211,3 +211,11 @@ Duration	00:01:25
 
 Deployed 'learn-bosh' to 'Bosh Lite Director'
 ```
+
+## verify the DNS search domain has been added to resolv.config
+Let's verify that the DNS search domain has been added to resolve.config on the VMs. Note that you should select the appropriate VM. In the case below we are using bosh-lite in a Vagrant VM.
+```
+$ bosh ssh
+
+$ more /etc/resolv.conf
+````
