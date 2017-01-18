@@ -142,6 +142,24 @@ release.tgz:    96% |ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 Release uploaded
 ```
 
+## verify releases
+We can verify the release has been uploaded to bosh director;
+```
+$ bosh releases
+Acting as user 'admin' on 'Bosh Lite Director'
+
++---------------+----------+-------------+
+| Name          | Versions | Commit Hash |
++---------------+----------+-------------+
+| learn-bosh    | 0+dev.3* | fd909331+   |
+| search_domain | 0+dev.1  | f7826eb7+   |
++---------------+----------+-------------+
+(*) Currently deployed
+(+) Uncommitted changes
+
+Releases total: 2
+```
+
 ## update runtime-config for bosh add on
 We have a release uploaded, now let's update the runtime-config for the add on
 ```
