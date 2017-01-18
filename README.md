@@ -94,3 +94,51 @@ Release name: search_domain
 Release version: 0+dev.1
 Release manifest: /Users/phopper/Documents/pivotal/bosh/bosh-add-on-search-domain/dev_releases/search_domain/search_domain-0+dev.1.yml
 ```
+
+## upload release to bosh director
+Now that we have a bosh release, we need to upload it to bosh director for use as a bosh add on;
+```
+bosh upload release dev_releases/search_domain/search_domain-0+dev.4.yml                                                           1 ↵
+Acting as user 'admin' on 'Bosh Lite Director'
+[WARNING] Missing blobstore configuration, please update config/final.yml before making a final release
+
+Copying packages
+----------------
+
+
+Copying jobs
+------------
+search_domain
+
+Generated /var/folders/hz/_9jdwmpn39n1dmyfj2nlw0880000gn/T/d20170118-56634-1ijw7i3/d20170118-56634-wjto1r/release.tgz
+Release size: 888B
+
+Verifying manifest...
+Extract manifest                                             OK
+Manifest exists                                              OK
+Release name/version                                         OK
+
+
+Uploading release
+release.tgz:    96% |ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    |    861B  39.5KB/s ETA:  00:00:00
+Director task 42
+  Started extracting release > Extracting release. Done (00:00:00)
+
+  Started verifying manifest > Verifying manifest. Done (00:00:00)
+
+  Started resolving package dependencies > Resolving package dependencies. Done (00:00:00)
+
+  Started processing 1 existing job > Processing 1 existing job. Done (00:00:00)
+
+  Started release has been created > search_domain/0+dev.4. Done (00:00:00)
+
+Task 42 done
+
+Started		2017-01-18 20:39:23 UTC
+Finished	2017-01-18 20:39:23 UTC
+Duration	00:00:00
+release.tgz:    96% |ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    |    861B    785B/s Time: 00:00:01
+
+Release uploaded
+```
+

@@ -2,10 +2,10 @@
 packages: []
 jobs:
 - name: search_domain
-  version: b6c355e74c9ad7a722e6216a127f5f60b110e651
-  fingerprint: b6c355e74c9ad7a722e6216a127f5f60b110e651
-  sha1: c80cd7b696c7496dc7d0b8e63b2325b075677119
-commit_hash: f7826eb7
+  version: 6b3067919b3bea0314817abc0eb201bc70d35eb8
+  fingerprint: 6b3067919b3bea0314817abc0eb201bc70d35eb8
+  sha1: 0ad8674953dfd2f600831c591313fc33f19a3c8e
+commit_hash: bd96eec1
 uncommitted_changes: true
 name: search_domain
 version: 0+dev.1
