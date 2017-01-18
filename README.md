@@ -169,6 +169,7 @@ Successfully updated runtime config
 ```
 
 ## deploy add on to the VMs
+We have all the pieces together, let's deploy the bosh add on to our VM(s)
 ```
 $ bosh deploy
 Acting as user 'admin' on deployment 'learn-bosh' on 'Bosh Lite Director'
