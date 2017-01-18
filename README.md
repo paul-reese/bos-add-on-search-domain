@@ -19,9 +19,8 @@ $ gem install bosh_cli
 Let CLI know about bosh Director (use admin/admin to log in):
 ```
 $ bosh target <director_url>
-
 ```
-Note: <director_url> would be the URL or IP address of bosh director, if using bosh-lite with a Vagrant VM the URL is '192.168.50.4';
+Note: director_url would be the URL or IP address of bosh director, if using bosh-lite with a Vagrant VM the URL is '192.168.50.4';
 
 ## clone repository
 Clone the GitHub repository;
