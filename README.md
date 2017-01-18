@@ -98,7 +98,7 @@ Release manifest: /Users/phopper/Documents/pivotal/bosh/bosh-add-on-search-domai
 ## upload release to bosh director
 Now that we have a bosh release, we need to upload it to bosh director for use as a bosh add on;
 ```
-bosh upload release dev_releases/search_domain/search_domain-0+dev.4.yml                                                           1 ↵
+bosh upload release dev_releases/search_domain/search_domain-0+dev.1.yml                                                           1 ↵
 Acting as user 'admin' on 'Bosh Lite Director'
 [WARNING] Missing blobstore configuration, please update config/final.yml before making a final release
 
@@ -142,3 +142,54 @@ release.tgz:    96% |ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 Release uploaded
 ```
 
+## update runtime-config for bosh add on
+We have a release uploaded, now let's update the runtime-config for the add on
+```
+$ bosh update runtime-config service-domain.yml
+Acting as user 'admin' on 'Bosh Lite Director'
+Successfully updated runtime config
+```
+
+## deploy add on to the VMs
+```
+$ bosh deploy
+Acting as user 'admin' on deployment 'learn-bosh' on 'Bosh Lite Director'
+Getting deployment properties from director...
+
+Detecting deployment changes
+----------------------------
+releases:
+- name: search_domain
+  version: 0+dev.1
+
+addons:
+- name: add-search-domain
+  jobs:
+  - name: search_domain
+    release: search_domain
+
+properties:
+  search_domain: "<redacted>"
+Please review all changes carefully
+
+Deploying
+---------
+Are you sure you want to deploy? (type 'yes' to continue): yes
+
+Director task 26
+Deprecation: Ignoring cloud config. Manifest contains 'networks' section.
+
+  Started preparing deployment > Preparing deployment. Done (00:00:00)
+
+  Started preparing package compilation > Finding packages to compile. Done (00:00:00)
+
+  Started updating job app > app/0 (6665a166-4c65-4d07-9144-fc0f9a028e6e) (canary). Done (00:01:25)
+
+Task 26 done
+
+Started		2017-01-18 20:26:33 UTC
+Finished	2017-01-18 20:27:58 UTC
+Duration	00:01:25
+
+Deployed 'learn-bosh' to 'Bosh Lite Director'
+```
