@@ -1,6 +1,6 @@
 # bosh-add-on-search-domain
 
-## install bosh-lite (_optional_)
+## install bosh-lite (_optional_ if using an existing PCF installation)
 
 Bring bosh-lite VM up with Vagrant:
 ```
